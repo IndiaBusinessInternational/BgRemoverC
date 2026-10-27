@@ -408,6 +408,24 @@
       *{ transition:none !important; animation:none !important; }
     }
 
+    /* ============ v5.7 EDGE TO EDGE ON EVERY SCREEN ============
+       CEO, 27 Oct 2026: "make all the apps edge to edge on laptop too". No 1640px centred
+       container and no outer gutter (was ~18px on laptops, ~11px on phones): the work panel and
+       the library run to the screen edges, side by side on wide screens and stacked on phones.
+       Cards are full-bleed (no side border, radius or shadow), 10px inner side padding, top bar
+       10px, and the page is never wider than the screen (clip, not hidden, so the sticky bar works). */
+    html, body{ overflow-x:clip; }
+    .container{ max-width:none; padding:8px 0 0; }
+    .appbar-inner{ max-width:none; padding-left:10px; padding-right:10px; }
+    .workspace{ gap:8px; }
+    .panel{ gap:8px; }
+    .card, .library{ border-radius:0; border-left:none; border-right:none; box-shadow:none; padding-left:10px; padding-right:10px; }
+    .card{ margin-bottom:8px; }
+    .status{ border-radius:0; border-left:none; border-right:none; padding-left:10px; padding-right:10px; }
+    #statusMessage{ margin-bottom:8px !important; }
+    .card, .library{ overflow-wrap:break-word; }
+    footer{ padding-left:10px; padding-right:10px; }
+
     /* ============ DRAGGABLE CARDS ============ */
     .card, .library{ position:relative; }
     .pill-head.drag-handle{ cursor:grab; user-select:none; touch-action:none; }
@@ -446,7 +464,7 @@
       <div class="brand">
         <img id="brandLogo" class="logo-badge" src="Twitter Header Photo.png" alt="India Business International">
         <div class="brand-text">
-          <span class="ver-pill" id="versionBadge">v5.6</span>
+          <span class="ver-pill" id="versionBadge">v5.7</span>
           <span class="brand-title">IBI BgRemoverC</span>
           <span class="brand-sub">India Business International</span>
         </div>
@@ -626,7 +644,7 @@
 
   <script>
   /* ======================== VERSION & CLOCK ======================== */
-  const VERSION = { major: 5, minor: 6, patch: 0 };
+  const VERSION = { major: 5, minor: 7, patch: 0 };
   const verStr = VERSION.minor === 0 ? `v${VERSION.major}` : `v${VERSION.major}.${VERSION.minor}`;
   document.getElementById('versionBadge').innerText = verStr;
   document.getElementById('aboutVersion').innerText = `IBI BgRemoverC ${verStr}`;
