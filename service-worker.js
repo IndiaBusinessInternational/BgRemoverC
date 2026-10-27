@@ -2,7 +2,7 @@
  * Bump CACHE_VERSION on every release so the PWA refreshes its cached shell.
  * Convention matches the app version (v5.0 -> ibi-bgremoverc-v5-0).
  */
-const CACHE_VERSION = 'ibi-bgremoverc-v5-5';
+const CACHE_VERSION = 'ibi-bgremoverc-v5-6';
 const APP_SHELL = [
   './',
   './index.html',
@@ -10,7 +10,8 @@ const APP_SHELL = [
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-maskable-512.png',
-  './icons/apple-touch-icon.png'
+  './icons/apple-touch-icon.png',
+  './ibi-share.js'
 ];
 
 self.addEventListener('install', (event) => {

@@ -8,10 +8,11 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="India Business International">
   <meta property="og:title" content="IBI BgRemoverC">
+  <meta property="og:image:secure_url" content="https://bgremover.indiabusinessinternational.online/og-banner.jpg">
   <meta property="og:url" content="https://bgremover.indiabusinessinternational.online/">
   <meta property="og:description" content="Professional background removal for product photos — right in your browser.">
-  <meta property="og:image" content="https://bgremover.indiabusinessinternational.online/og-banner.png">
-  <meta property="og:image:type" content="image/png">
+  <meta property="og:image" content="https://bgremover.indiabusinessinternational.online/og-banner.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="IBI BgRemoverC — India Business International">
@@ -19,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="IBI BgRemoverC">
   <meta name="twitter:description" content="Professional background removal for product photos — right in your browser.">
-  <meta name="twitter:image" content="https://bgremover.indiabusinessinternational.online/og-banner.png">
+  <meta name="twitter:image" content="https://bgremover.indiabusinessinternational.online/og-banner.jpg">
   <meta name="description" content="IBI BgRemoverC — professional background removal by India Business International. Dual engine: remove.bg + fapihub.">
   <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -435,6 +436,7 @@
     #fapihubTestResult.ok{ color:var(--success); font-weight:700; }
     #fapihubTestResult.bad{ color:var(--danger); font-weight:700; }
   </style>
+<script src="ibi-share.js" defer data-slot=".appbar-actions"></script>
 </head>
 <body>
 
@@ -444,7 +446,7 @@
       <div class="brand">
         <img id="brandLogo" class="logo-badge" src="Twitter Header Photo.png" alt="India Business International">
         <div class="brand-text">
-          <span class="ver-pill" id="versionBadge">v5.5</span>
+          <span class="ver-pill" id="versionBadge">v5.6</span>
           <span class="brand-title">IBI BgRemoverC</span>
           <span class="brand-sub">India Business International</span>
         </div>
@@ -624,7 +626,7 @@
 
   <script>
   /* ======================== VERSION & CLOCK ======================== */
-  const VERSION = { major: 5, minor: 5, patch: 0 };
+  const VERSION = { major: 5, minor: 6, patch: 0 };
   const verStr = VERSION.minor === 0 ? `v${VERSION.major}` : `v${VERSION.major}.${VERSION.minor}`;
   document.getElementById('versionBadge').innerText = verStr;
   document.getElementById('aboutVersion').innerText = `IBI BgRemoverC ${verStr}`;
